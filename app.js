@@ -63,10 +63,6 @@ for(var b = 0; b < allStores.length; b++) {
   allStores[b].render();
 }
 
-//Creating customersEachHour row
-//Creating cookiesEachHour row
-  //adding the rows to the table?
-
 function myHeader() {
   var trEl = document.createElement('tr');
   var thEL = document.createElement('th');
