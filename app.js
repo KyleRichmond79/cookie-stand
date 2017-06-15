@@ -56,10 +56,7 @@ Store.prototype.render = function() {
   // theTable.appendChild(trEl);
   theTable.appendChild(trEl);
 };
-// myHeader();
-// for(var b = 0; b < allStores.length; b++) {
-  // allStores[b].render();
-// }
+
 new Store('Pike Place Market', 23, 65, 6.3);
 new Store('Alki', 2, 24, 1.2);
 new Store('Capitol Hill', 20, 38, 2.3);
@@ -86,9 +83,9 @@ function myHeader() {
 function handleCookieStandForm(event){
   event.preventDefault();
   var theStoreLocations = event.target.theStoreLocations.value;
-  var yourMinCustomersEachHour = event.target.yourMinCustomersEachHour.value;
-  var yourMaxCustomersEachHour = event.target.yourMaxCustomersEachHour.value;
-  var yourAvgCookiesPerHour = event.target.yourAvgCookiesPerHour.value;
+  var yourMinCustomersEachHour = parseInt(event.target.yourMinCustomersEachHour.value);
+  var yourMaxCustomersEachHour = parseInt(event.target.yourMaxCustomersEachHour.value);
+  var yourAvgCookiesPerHour = parseFloat(event.target.yourAvgCookiesPerHour.value);
   var newStore = new Store(theStoreLocations, yourMinCustomersEachHour, yourMaxCustomersEachHour, yourAvgCookiesPerHour);
   event.target.theStoreLocations.value = null;
   event.target.yourMinCustomersEachHour.value = null;
