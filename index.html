@@ -3,16 +3,30 @@
   <head>
     <meta charset="utf-8">
     <title>Pat's Salmon Cookies</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
     <h1>Pat's Salmon Cookies</h1>
     <table id="CookieStores"><thead id="Hours"></thead></table>
-    <!-- <p>Weasles!</p>
-    <ul id="locationName"></ul>
-    <ul id="locationName2"></ul>
-    <ul id="locationName3"></ul>
-    <ul id="locationName4"></ul>
-    <ul id="locationName5"></ul> -->
+    <form id="cookie-stand-form">
+      <fieldset>
+        <legend>Daily Report Form</legend>
+
+        <label for="theStoreLocations">Location: </label>
+        <input  name="theStoreLocations" type="text" size="50"/>
+
+        <label for="yourMinCustomersEachHour">Min: </label>
+        <input name="yourMinCustomersEachHour" type="text"/>
+
+        <label for="yourMaxCustomersEachHour">Max: </label>
+        <input name="yourMaxCustomersEachHour" type="text"/>
+
+        <label for="yourAvgCookiesPerHour">CookieAvg: </label>
+        <input name="yourAvgCookiesPerHour" type="text"/>
+
+        <button type="submit">Submit Report</button>
+      </fieldset>
+    </form>
     <script src="app.js"></script>
   </body>
 </html>

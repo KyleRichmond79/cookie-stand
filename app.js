@@ -1,9 +1,9 @@
 'use strict';
-//
-var hours = ['6am','7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm', '8pm'];
+
+var hours = ['6am','7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 var allStores = [];
 var theTable = document.getElementById('CookieStores');
-
+var cookieStandForm = document.getElementById('cookie-stand-form');
 function Store(storeLocation, minCustomersPerHour, maxCustomersPerHour, avgCookiesPerCustomer) {
   this.storeLocation = storeLocation;
   this.minCustomersPerHour = minCustomersPerHour;
@@ -12,6 +12,8 @@ function Store(storeLocation, minCustomersPerHour, maxCustomersPerHour, avgCooki
   this.customersEachHour = [];
   this.cookiesEachHour = [];
   this.totalSales = 0;
+  this.calcCookiesPerHour();
+  this.render();
   allStores.push(this);
 };
 
@@ -33,18 +35,9 @@ Store.prototype.calcCookiesPerHour = function () {
   return this.cookiesEachHour;
 };
 
-new Store('Pike Place Market', 23, 65, 6.3);
-new Store('Alki', 2, 24, 1.2);
-new Store('Capitol Hill', 20, 38, 2.3);
-new Store('Seattle Center', 11, 38, 3.7);
-new Store('Seattle Tacoma International Airport', 3, 24, 1.2);
-
 for(var l = 0; l < allStores.length; l++) {
   allStores[l].calcCookiesPerHour();
 }
-// tdEl = document.createElement = ('td');
-// trEl.textContent = this.customersEachHour;
-// trEl.appendChild(tdEl);
 
 Store.prototype.render = function() {
   var trEl = document.createElement('tr');
@@ -55,13 +48,23 @@ Store.prototype.render = function() {
     tdEl.textContent = this.cookiesEachHour[a];
     trEl.appendChild(tdEl);
   }
+
+  //logic for totalSales each time
+  var thEl = document.createElement('th');
+  thEl.textContent = this.totalSales;
+  trEl.appendChild(thEl);
   // theTable.appendChild(trEl);
   theTable.appendChild(trEl);
 };
-myHeader();
-for(var b = 0; b < allStores.length; b++) {
-  allStores[b].render();
-}
+// myHeader();
+// for(var b = 0; b < allStores.length; b++) {
+  // allStores[b].render();
+// }
+new Store('Pike Place Market', 23, 65, 6.3);
+new Store('Alki', 2, 24, 1.2);
+new Store('Capitol Hill', 20, 38, 2.3);
+new Store('Seattle Center', 11, 38, 3.7);
+new Store('Seattle Tacoma International Airport', 3, 24, 1.2);
 
 function myHeader() {
   var trEl = document.createElement('tr');
@@ -79,3 +82,18 @@ function myHeader() {
   thEl.textContent = 'Daily Location Total';
   trEl.appendChild(thEl);
 }
+//function for the event handler to submit the form
+function handleCookieStandForm(event){
+  event.preventDefault();
+  var theStoreLocations = event.target.theStoreLocations.value;
+  var yourMinCustomersEachHour = event.target.yourMinCustomersEachHour.value;
+  var yourMaxCustomersEachHour = event.target.yourMaxCustomersEachHour.value;
+  var yourAvgCookiesPerHour = event.target.yourAvgCookiesPerHour.value;
+  var newStore = new Store(theStoreLocations, yourMinCustomersEachHour, yourMaxCustomersEachHour, yourAvgCookiesPerHour);
+  event.target.theStoreLocations.value = null;
+  event.target.yourMinCustomersEachHour.value = null;
+  event.target.yourMaxCustomersEachHour.value = null;
+  event.target.yourAvgCookiesPerHour.value = null;
+}
+
+cookieStandForm.addEventListener('submit', handleCookieStandForm);
