@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pat's Salmon Cookies</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h1>Pat's Salmon Cookies</h1>
+    <table id="CookieStores"><thead id="Hours"></thead></table>
+    <form id="cookie-stand-form">
+      <fieldset>
+        <legend>Daily Report Form</legend>
+
+        <label for="theStoreLocations">Location: </label>
+        <input  name="theStoreLocations" type="text" size="50"/>
+
+        <label for="yourMinCustomersEachHour">Min: </label>
+        <input name="yourMinCustomersEachHour" type="number"/>
+
+        <label for="yourMaxCustomersEachHour">Max: </label>
+        <input name="yourMaxCustomersEachHour" type="number"/>
+
+        <label for="yourAvgCookiesPerHour">CookieAvg: </label>
+        <input name="yourAvgCookiesPerHour" type="text"/>
+
+        <button type="submit">Submit Report</button>
+      </fieldset>
+    </form>
+    <script src="app.js"></script>
+  </body>
+</html>
