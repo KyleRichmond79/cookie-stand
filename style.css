@@ -1,0 +1,61 @@
+body {
+  width: 960px;
+  margin: 0 auto;
+}
+
+fieldset {
+  background-color: skyblue;
+  border-color: silver;
+  border-width: medium;
+  width: 50%;
+  padding: 15px;
+  margin-bottom: 30px;
+  font-family: cursive;
+
+}
+
+input {
+  border-radius: 10%;
+}
+
+
+legend {
+  background-color: skyblue;
+  border-style:  solid;
+  border-width: medium;
+  border-color: silver;
+  font-family: cursive;
+}
+
+#CookieStores {
+  background-color: salmon;
+  border-style: solid;
+  border-width: medium;
+  border-color: silver;
+  font-family: cursive;
+}
+
+.chinook {
+  display: inline-block;
+  margin: auto;
+  width: 20%;
+  position: absolute;
+  top: 20px;
+  right: 253px;
+}
+
+.cutter {
+  display: inline-block;
+  margin-top: 30px;
+  width: 20%;
+  position: fixed;
+  right: 600px;
+  border-style: solid;
+  border-width: medium;
+  border-color: silver;
+}
+
+h1 {
+  font-family: cursive;
+  color: salmon;
+}
