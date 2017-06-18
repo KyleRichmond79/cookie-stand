@@ -7,26 +7,30 @@
   </head>
   <body>
     <h1>Pat's Salmon Cookies</h1>
-    <table id="CookieStores"><thead id="Hours"></thead></table>
     <form id="cookie-stand-form">
       <fieldset>
         <legend>Daily Report Form</legend>
 
         <label for="theStoreLocations">Location: </label>
-        <input  name="theStoreLocations" type="text" size="50"/>
+        <input  name="theStoreLocations" style="text transform: capitalize;" type="text"/>
 
         <label for="yourMinCustomersEachHour">Min: </label>
-        <input name="yourMinCustomersEachHour" type="number"/>
+        <input name="yourMinCustomersEachHour" type="number" min = "0"/>
 
         <label for="yourMaxCustomersEachHour">Max: </label>
-        <input name="yourMaxCustomersEachHour" type="number"/>
+        <input name="yourMaxCustomersEachHour" type="number" min = "0"/>
 
         <label for="yourAvgCookiesPerHour">CookieAvg: </label>
-        <input name="yourAvgCookiesPerHour" type="text"/>
+        <input name="yourAvgCookiesPerHour" type="text" size="10"/>
 
         <button type="submit">Submit Report</button>
       </fieldset>
     </form>
+    <table id="CookieStores"></table>
+    <div class="thechinook"><img class="chinook" src="https://github.com/codefellows/seattle-201d23/blob/master/class-09-css_wireframe_part_1/lab/assets/chinook.jpg?raw=true" alt="">
+    </div>
+    <img class="cutter" src="https://github.com/codefellows/seattle-201d23/blob/master/class-09-css_wireframe_part_1/lab/assets/cutter.jpeg?raw=true" alt="">
+
     <script src="app.js"></script>
   </body>
 </html>
