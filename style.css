@@ -1,6 +1,32 @@
 body {
   width: 960px;
   margin: 0 auto;
+  background-image: url(https://github.com/codefellows/seattle-201d23/blob/master/class-09-css_wireframe_part_1/lab/assets/family.jpg?raw=true) center no-repeat, z-index: auto;
+}
+
+img.salmon {
+  width: 200px;
+  float: right;
+  margin-top: -65px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+
+img.salmon_2 {
+  width: 200px;
+  float: left;
+  /*margin-top:;*/
+  margin-bottom: 27pix;
+  margin-left: auto;
+  margin-right: auto;
+/* found this on css-tricks.com*/
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
 }
 
 fieldset {
@@ -38,24 +64,86 @@ legend {
 .chinook {
   display: inline-block;
   margin: auto;
-  width: 20%;
+  width: 18%;
   position: absolute;
   top: 20px;
-  right: 253px;
+  right: 375px;
 }
 
-.cutter {
-  display: inline-block;
-  margin-top: 30px;
-  width: 20%;
-  position: fixed;
-  right: 600px;
-  border-style: solid;
-  border-width: medium;
-  border-color: silver;
-}
 
 h1 {
   font-family: cursive;
   color: salmon;
+}
+
+h1.welcome {
+  width: 560px;
+  text-align: center;
+  float: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.NavBar ul {
+  margin-top: 20pt;
+  width: 15%;
+  list-style-type: none;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 30px
+  font-size: 20pt;
+  display: block;
+  padding: none;
+  float: right;
+}
+
+a:link, a:visited {
+   display: inline-block;
+   font-weight: bold;
+   color: salmon;
+   background-color: skyblue;
+   width: 240px;
+   text-align: center;
+   padding: 4px;
+   text-transform: uppercase;
+   text-decoration: none;
+ }
+
+ a:hover, a:active {
+   background-color: salmon;
+   color: skyblue;
+ }
+
+p {
+  width: 960px;
+  color: salmon;
+  font-family: cursive;
+  font-size: 14pt;
+}
+
+img.four-fish{
+  width: 20%auto;
+  margin-top: 125px;
+  margin-right: 400px;
+  margin-bottom: 200px;
+
+}
+
+img.mug {
+  position: absolute;
+  left: 75px;
+  top: 50px;
+  z-index: -1;
+}
+
+img.t-shirt {
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.cutter {
+  margin-top: 50px;
+  width: 20%;
+  right: 300px;
+  margin-bottom: 30px;
 }
